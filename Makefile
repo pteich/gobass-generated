@@ -15,7 +15,10 @@ build-linux:
 	go build -ldflags "-X 'main.Version=${DRONE_TAG} SHA:${DRONE_COMMIT_SHA}' -X 'main.BuildDate=${BUILD_DATE}'" -o basstest *.go
 
 deps:
-	go mod download
+	go install github.com/xlab/c-for-go@latest
+
+generate:
+	c-for-go ./gobass.yaml
 
 test:
 	go test ./
