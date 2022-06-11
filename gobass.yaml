@@ -9,6 +9,8 @@ GENERATOR:
     "../include/bass.h",
     "../include/bassenc.h",
     "../include/bassenc_mp3.h",
+    "../include/bassenc_flac.h",
+    "../include/bassenc_ogg.h",
     "../include/bassmix.h"
   ]
 
@@ -23,6 +25,8 @@ PARSER:
     "./include/bass.h",
     "./include/bassenc.h",
     "./include/bassenc_mp3.h",
+    "./include/bassenc_flac.h",
+    "./include/bassenc_ogg.h",
     "./include/bassmix.h"
   ]
 
@@ -44,8 +48,8 @@ TRANSLATOR:
       - {action: replace, from: "PROC$", to: _}
       - {action: accept, from: "PROCS$"}
       - {action: replace, from: "PROCS$", to: _}
-      - { action: accept, from: "^ENCODEPROCEX" }
-      - { action: replace, from: "^ENCODEPROCEX", to: _ }
+      - {action: accept, from: "^ENCODEPROCEX" }
+      - {action: replace, from: "^ENCODEPROCEX", to: _ }
       - {action: accept, from: "CODE$"}
       - {action: replace, from: "CODE$", to: _}
       - {transform: export}
