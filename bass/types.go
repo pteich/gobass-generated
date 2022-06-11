@@ -139,10 +139,10 @@ type Fileseekproc func(offset uint32, user unsafe.Pointer) int32
 
 // BassFileprocs as declared in include/bass.h:502
 type BassFileprocs struct {
-	Close          Filecloseproc
-	Length         Filelenproc
-	Read           Filereadproc
-	Seek           Fileseekproc
+	Close          *Filecloseproc
+	Length         *Filelenproc
+	Read           *Filereadproc
+	Seek           *Fileseekproc
 	refbf5215a7    *C.BASS_FILEPROCS
 	allocsbf5215a7 interface{}
 }
