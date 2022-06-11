@@ -1,4 +1,4 @@
-# Go-Bindings for Un4seen BASS
+# Go-Bindings for Un4seen BASS Audio Library
 
 Generated using https://github.com/xlab/c-for-go
 
