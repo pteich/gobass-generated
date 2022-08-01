@@ -1,3 +1,3 @@
-module github.com/pteich/gobass
+module github.com/pteich/gobass-generated
 
 go 1.17
