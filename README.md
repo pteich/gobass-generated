@@ -2,4 +2,4 @@
 
 Generated using https://github.com/xlab/c-for-go
 
-For mor information on Un4seen BASS see https://www.un4seen.com/
+For more information on Un4seen BASS and licensing information see https://www.un4seen.com/
