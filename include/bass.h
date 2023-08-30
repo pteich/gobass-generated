@@ -1072,7 +1072,7 @@ DWORD BASSDEF(BASS_ChannelFlags)(DWORD handle, DWORD flags, DWORD mask);
 BOOL BASSDEF(BASS_ChannelLock)(DWORD handle, BOOL lock);
 BOOL BASSDEF(BASS_ChannelFree)(DWORD handle);
 BOOL BASSDEF(BASS_ChannelPlay)(DWORD handle, BOOL restart);
-BOOL BASSDEF(BASS_ChannelStart)(DWORD handle);
+//BOOL BASSDEF(BASS_ChannelStart)(DWORD handle);
 BOOL BASSDEF(BASS_ChannelStop)(DWORD handle);
 BOOL BASSDEF(BASS_ChannelPause)(DWORD handle);
 BOOL BASSDEF(BASS_ChannelUpdate)(DWORD handle, DWORD length);
