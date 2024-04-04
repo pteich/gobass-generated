@@ -278,6 +278,8 @@ type BassFxVolumeParam struct {
 // Iosnotifyproc type as declared in include/bass.h:983
 type Iosnotifyproc func(status uint32)
 
+type Hstream uint32
+
 // Hencode type as declared in include/bassenc.h:30
 type Hencode uint32
 

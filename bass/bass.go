@@ -452,7 +452,7 @@ func BassStreamcreatefile(mem int32, file unsafe.Pointer, offset uint64, length 
 }
 
 // BassStreamcreateurl function as declared in include/bass.h:1043
-func BassStreamcreateurl(url string, offset uint32, flags uint32, proc Downloadproc, user unsafe.Pointer) uint32 {
+func BassStreamcreateurl(url string, offset uint32, flags uint32, proc Downloadproc, user unsafe.Pointer) Hstream {
 	curl, curlAllocMap := unpackPCharString(url)
 	coffset, coffsetAllocMap := (C.DWORD)(offset), cgoAllocsUnknown
 	cflags, cflagsAllocMap := (C.DWORD)(flags), cgoAllocsUnknown
@@ -464,7 +464,7 @@ func BassStreamcreateurl(url string, offset uint32, flags uint32, proc Downloadp
 	runtime.KeepAlive(cflagsAllocMap)
 	runtime.KeepAlive(coffsetAllocMap)
 	runtime.KeepAlive(curlAllocMap)
-	__v := (uint32)(__ret)
+	__v := (Hstream)(__ret)
 	return __v
 }
 
@@ -484,7 +484,7 @@ func BassStreamcreatefileuser(system uint32, flags uint32, proc *BassFileprocs, 
 }
 
 // BassStreamfree function as declared in include/bass.h:1045
-func BassStreamfree(handle uint32) int32 {
+func BassStreamfree(handle Hstream) int32 {
 	chandle, chandleAllocMap := (C.HSTREAM)(handle), cgoAllocsUnknown
 	__ret := C.BASS_StreamFree(chandle)
 	runtime.KeepAlive(chandleAllocMap)
@@ -766,7 +766,7 @@ func BassChannelfree(handle uint32) int32 {
 }
 
 // BassChannelplay function as declared in include/bass.h:1074
-func BassChannelplay(handle uint32, restart int32) int32 {
+func BassChannelplay(handle Hstream, restart int32) int32 {
 	chandle, chandleAllocMap := (C.DWORD)(handle), cgoAllocsUnknown
 	crestart, crestartAllocMap := (C.BOOL)(restart), cgoAllocsUnknown
 	__ret := C.BASS_ChannelPlay(chandle, crestart)
@@ -1249,7 +1249,7 @@ func BassEncodeAddchunk(handle Hencode, id string, buffer unsafe.Pointer, length
 }
 
 // BassEncodeWrite function as declared in include/bassenc.h:161
-func BassEncodeWrite(handle uint32, buffer unsafe.Pointer, length uint32) int32 {
+func BassEncodeWrite(handle Hencode, buffer unsafe.Pointer, length uint32) int32 {
 	chandle, chandleAllocMap := (C.DWORD)(handle), cgoAllocsUnknown
 	cbuffer, cbufferAllocMap := buffer, cgoAllocsUnknown
 	clength, clengthAllocMap := (C.DWORD)(length), cgoAllocsUnknown
@@ -1302,7 +1302,7 @@ func BassEncodeIsactive(handle uint32) uint32 {
 }
 
 // BassEncodeSetnotify function as declared in include/bassenc.h:166
-func BassEncodeSetnotify(handle uint32, proc Encodenotifyproc, user unsafe.Pointer) int32 {
+func BassEncodeSetnotify(handle Hencode, proc Encodenotifyproc, user unsafe.Pointer) int32 {
 	chandle, chandleAllocMap := (C.DWORD)(handle), cgoAllocsUnknown
 	cproc, cprocAllocMap := proc.PassRef()
 	cuser, cuserAllocMap := user, cgoAllocsUnknown

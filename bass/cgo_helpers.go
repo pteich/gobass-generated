@@ -88,6 +88,10 @@ const sizeOfBassDeviceinfoValue = unsafe.Sizeof([1]C.BASS_DEVICEINFO{})
 
 // unpackPCharString copies the data from Go string as *C.char.
 func unpackPCharString(str string) (*C.char, *cgoAllocMap) {
+	if str == "" {
+		return nil, nil
+	}
+
 	allocs := new(cgoAllocMap)
 	defer runtime.SetFinalizer(allocs, func(a *cgoAllocMap) {
 		go a.Free()
