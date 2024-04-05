@@ -15,21 +15,28 @@ import (
 )
 
 // BassErrorMp4Nostream as defined in include/bass_aac.h:15
-BassErrorMp4Nostream = 6000
+const BassErrorMp4Nostream = 6000
+
 // BassConfigMp4Video as defined in include/bass_aac.h:18
-BassConfigMp4Video = 0x10700
+const BassConfigMp4Video = 0x10700
+
 // BassConfigAacMp4 as defined in include/bass_aac.h:19
-BassConfigAacMp4 = 0x10701
+const BassConfigAacMp4 = 0x10701
+
 // BassConfigAacPrescan as defined in include/bass_aac.h:20
-BassConfigAacPrescan = 0x10702
+const BassConfigAacPrescan = 0x10702
+
 // BassAacFrame960 as defined in include/bass_aac.h:23
-BassAacFrame960 = 0x1000
+const BassAacFrame960 = 0x1000
+
 // BassAacStereo as defined in include/bass_aac.h:24
-BassAacStereo = 0x400000
+const BassAacStereo = 0x400000
+
 // BassCtypeStreamAac as defined in include/bass_aac.h:27
-BassCtypeStreamAac = 0x10b00
+const BassCtypeStreamAac = 0x10b00
+
 // BassCtypeStreamMp4 as defined in include/bass_aac.h:28
-BassCtypeStreamMp4 = 0x10b01
+const BassCtypeStreamMp4 = 0x10b01
 
 // BassEncodeAacGetversion function as declared in include/bassenc_aac.h:25
 func BassEncodeAacGetversion() uint32 {
