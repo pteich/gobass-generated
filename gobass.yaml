@@ -10,6 +10,7 @@ GENERATOR:
     "../include/bassenc.h",
     "../include/bassenc_mp3.h",
     "../include/bassenc_aac.h",
+    "../include/bass_aac.h",
     "../include/bassenc_flac.h",
     "../include/bassenc_ogg.h",
     "../include/bassmix.h"
@@ -27,6 +28,7 @@ PARSER:
     "./include/bassenc.h",
     "./include/bassenc_mp3.h",
     "./include/bassenc_aac.h",
+    "./include/bass_aac.h",
     "./include/bassenc_flac.h",
     "./include/bassenc_ogg.h",
     "./include/bassmix.h"

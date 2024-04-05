@@ -4,7 +4,6 @@ package bass
 #include "../include/bass.h"
 #include "../include/bassenc.h"
 #include "../include/bassenc_mp3.h"
-#include "../include/bassenc_aac.h"
 #include "../include/bassenc_flac.h"
 #include "../include/bassenc_ogg.h"
 #include "../include/bassmix.h"

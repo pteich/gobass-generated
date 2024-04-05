@@ -8,7 +8,7 @@ package bass
 #cgo windows,386 LDFLAGS: -L${SRCDIR}/../lib/windows_386
 #cgo windows,amd64 LDFLAGS: -L${SRCDIR}/../lib/windows_amd64
 #cgo darwin LDFLAGS: -L${SRCDIR}/../lib/darwin
-#cgo LDFLAGS: -lbass -lbassenc -lbassenc_mp3 -lbassenc_flac -lbassenc_ogg -lbassenc_aac -lbassmix
+#cgo LDFLAGS: -lbass -lbassenc -lbassenc_mp3 -lbassenc_flac -lbassenc_ogg -lbassenc_aac -lbass_aac -lbassmix
 
 #cgo CFLAGS: -I${SRCDIR}/../include
 */
